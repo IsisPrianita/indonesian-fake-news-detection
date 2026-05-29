@@ -1,0 +1,13 @@
+Embedding,Config,Accuracy,Precision,Recall,F1-Score
+TF-IDF,C0_baseline,0.997,0.997,0.997,0.997
+TF-IDF,C1_stopword,0.9978,0.9978,0.9978,0.9978
+TF-IDF,C2_stemming,0.9971,0.9971,0.9971,0.9971
+TF-IDF,C3_full_pipeline,0.9974,0.9974,0.9974,0.9974
+Word2Vec,C0_baseline,0.9943,0.9943,0.9943,0.9943
+Word2Vec,C1_stopword,0.9957,0.9957,0.9957,0.9957
+Word2Vec,C2_stemming,0.9943,0.9943,0.9943,0.9943
+Word2Vec,C3_full_pipeline,0.9958,0.9959,0.9958,0.9959
+IndoBERT,C0_baseline,0.9958,0.9958,0.9958,0.9958
+IndoBERT,C1_stopword,0.9958,0.9959,0.9958,0.9958
+IndoBERT,C2_stemming,0.9951,0.995,0.9951,0.995
+IndoBERT,C3_full_pipeline,0.9955,0.9955,0.9955,0.9955
