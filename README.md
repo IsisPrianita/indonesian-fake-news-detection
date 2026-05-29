@@ -85,7 +85,7 @@ IndoBERT membutuhkan koneksi internet saat pertama kali dijalankan untuk mengund
 
 ## Teknologi
 
-- **Python 3.x**
+- **Python 3.10.2**
 - [PySastrawi](https://github.com/har07/PySastrawi) — stemmer & stopword Bahasa Indonesia
 - [Gensim](https://radimrehurek.com/gensim/) — Word2Vec
 - [HuggingFace Transformers](https://huggingface.co/) — IndoBERT
