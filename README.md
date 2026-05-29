@@ -4,7 +4,7 @@ Eksperimen deteksi berita hoaks berbahasa Indonesia menggunakan berbagai kombina
 
 ---
 
-## 📌 Deskripsi
+## Deskripsi
 
 Proyek ini membandingkan tiga pendekatan representasi teks — **TF-IDF**, **Word2Vec**, dan **IndoBERT** — dikombinasikan dengan **Support Vector Machine (SVM)** untuk mengklasifikasikan artikel berita sebagai *hoax* atau *real*. Eksperimen dilakukan dengan studi ablasi pada empat konfigurasi preprocessing untuk mengukur dampak *stopword removal* dan *stemming* terhadap performa model.
 
@@ -12,13 +12,13 @@ Dataset berita hoaks bersumber dari **TurnBackHoax**, sedangkan berita real diam
 
 ---
 
-## 🗂️ Struktur Repository
+## Struktur Repository
 
 ```
 .
-├── experimentrm1.ipynb        # Notebook utama eksperimen
+├── experimentrm1.ipynb          # Notebook utama eksperimen
 ├── dataset/
-│   └── **/RAW/                # File dataset .xlsx/.csv mentah
+│   └── **/RAW/                  # File dataset .xlsx/.csv mentah
 ├── preprocessed_cache_full.pkl  # Cache hasil preprocessing (auto-generated)
 ├── ablation_results.csv         # Hasil ringkasan semua eksperimen (auto-generated)
 └── README.md
@@ -26,16 +26,16 @@ Dataset berita hoaks bersumber dari **TurnBackHoax**, sedangkan berita real diam
 
 ---
 
-## 🔬 Eksperimen
+## Eksperimen
 
 ### Konfigurasi Preprocessing (Ablasi)
 
 | Kode | Stopword Removal | Stemming |
 |------|:-:|:-:|
-| `C0_baseline` | ✗ | ✗ |
-| `C1_stopword` | ✓ | ✗ |
-| `C2_stemming` | ✗ | ✓ |
-| `C3_full_pipeline` | ✓ | ✓ |
+| `C0_baseline` | No | No |
+| `C1_stopword` | Yes | No |
+| `C2_stemming` | No | Yes |
+| `C3_full_pipeline` | Yes | Yes |
 
 ### Model yang Diuji
 
@@ -51,7 +51,7 @@ Dataset berita hoaks bersumber dari **TurnBackHoax**, sedangkan berita real diam
 
 ---
 
-## 📊 Metrik Evaluasi
+## Metrik Evaluasi
 
 - Accuracy
 - Precision (weighted)
@@ -62,17 +62,17 @@ Hasil lengkap tersimpan otomatis di `ablation_results.csv`.
 
 ---
 
-## ⚙️ Instalasi
+## Instalasi
 
 ```bash
 pip install pandas numpy scikit-learn gensim transformers torch PySastrawi tqdm openpyxl
 ```
 
-> IndoBERT membutuhkan koneksi internet saat pertama kali dijalankan untuk mengunduh model dari Hugging Face.
+IndoBERT membutuhkan koneksi internet saat pertama kali dijalankan untuk mengunduh model dari Hugging Face.
 
 ---
 
-## 🚀 Cara Menjalankan
+## Cara Menjalankan
 
 1. Clone repository ini
 2. Tempatkan file dataset di `dataset/**/RAW/` sesuai format berikut:
@@ -83,7 +83,7 @@ pip install pandas numpy scikit-learn gensim transformers torch PySastrawi tqdm 
 
 ---
 
-## 🧰 Teknologi
+## Teknologi
 
 - **Python 3.x**
 - [PySastrawi](https://github.com/har07/PySastrawi) — stemmer & stopword Bahasa Indonesia
@@ -94,6 +94,6 @@ pip install pandas numpy scikit-learn gensim transformers torch PySastrawi tqdm 
 
 ---
 
-## 📄 Lisensi
+## Lisensi
 
 MIT License
